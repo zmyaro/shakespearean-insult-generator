@@ -1,0 +1,215 @@
+<html>
+	<head>
+		<title>Shakespearean Insult Generator</title>
+		<script type="text/javascript">
+			var word1 = [
+				"artless",
+				"bawdy",
+				"beslubbering",
+				"bootless",
+				"churlish",
+				"cockered",
+				"clouted",
+				"craven",
+				"currish",
+				"dankish",
+				"dissembling",
+				"droning",
+				"errant",
+				"fawning",
+				"fobbing",
+				"froward",
+				"frothy",
+				"gleeking",
+				"goatish",
+				"gorbellied",
+				"impertinent",
+				"infectious",
+				"jarring",
+				"loggerheaded",
+				"lumpish",
+				"mammering",
+				"mangled",
+				"mewling",
+				"paunchy",
+				"pribbling",
+				"puking",
+				"puny",
+				"qualling",
+				"rank",
+				"reeky",
+				"roguish",
+				"ruttish",
+				"saucy",
+				"spleeny",
+				"spongy",
+				"surly",
+				"tottering",
+				"unmuzzled",
+				"vain",
+				"venomed",
+				"villainous",
+				"warped",
+				"wayward",
+				"weedy"
+			];
+			
+			word2 = [
+				"base-court",
+				"bat-fowling",
+				"beef-witted",
+				"beetle-headed",
+				"boil-brained",
+				"clapper-clawed",
+				"clay-brained",
+				"common-kissing",
+				"crook-pated",
+				"dismal-dreaming",
+				"dizzy-eyed",
+				"doghearted",
+				"dread-bolted",
+				"earth-vexing",
+				"elf-skinned",
+				"fat-kidneyed",
+				"fen-sucked",
+				"flap-mouthed",
+				"fly-bitten",
+				"folly-fallen",
+				"fool-born",
+				"full-gorged",
+				"guts-griping",
+				"half-faced",
+				"hasty-witted",
+				"hedge-born",
+				"hell-hated",
+				"idle-headed",
+				"ill-breeding",
+				"ill-nurtured",
+				"knotty-pated",
+				"milk-livered",
+				"motley-minded",
+				"onion-eyed",
+				"plume-plucked",
+				"pottle-deep",
+				"pox-marked",
+				"reeling-ripe",
+				"rough-hewn",
+				"rude-growing",
+				"rump-fed",
+				"shard-borne",
+				"sheep-biting",
+				"spur-galled",
+				"swag-bellied",
+				"tardy-gaited",
+				"tickle-brained",
+				"toad-spotted",
+				"unchin-snouted"
+			];
+			
+			word3 = [
+				"apple-john",
+				"baggage",
+				"barnacle",
+				"bladder",
+				"boar-pig",
+				"bugbear",
+				"bum-bailey",
+				"canker-blossom",
+				"clack-dish",
+				"clotpole",
+				"coxcomb",
+				"codpiece",
+				"death-token",
+				"dewberry",
+				"flap-dragon",
+				"flax-wench",
+				"flirt-gill",
+				"foot-licker",
+				"fustilarian",
+				"giglet",
+				"gudgeon",
+				"haggard",
+				"harpy",
+				"hedge-pig",
+				"horn-beast",
+				"hugger-mugger",
+				"joithead",
+				"lewdster",
+				"lout",
+				"maggot-pie",
+				"malt-worm",
+				"mammet",
+				"measle",
+				"minnow",
+				"miscreant",
+				"moldwarp",
+				"mumble-news",
+				"nut-hook",
+				"pigeon-egg",
+				"pignut",
+				"puttock",
+				"pumpion",
+				"ratsbane",
+				"scut",
+				"skainsmate",
+				"strumpet",
+				"varlot",
+				"vassal",
+				"whey-face"
+			];
+			
+			function showInsult() {
+				document.getElementById("insult").value = "Thou " + word1[Math.floor(Math.random() * word1.length)] + ((Math.random() > 0.5) ? (" " + word2[Math.floor(Math.random() * word2.length)]) : "") + " " + word3[Math.floor(Math.random() * word3.length)] + "!";
+				document.getElementById("insult").focus();
+				document.getElementById("insult").select();
+			}
+		</script>
+		<style type="text/css">
+			body {
+				font-family:Arial, Helvetica, sans-serif;
+				text-align:center;
+				background-color:#EFEFFF;
+				background-image:-webkit-linear-gradient(white, #EFEFFF);
+				background-image:   -moz-linear-gradient(white, #EFEFFF);
+				background-image:    -ms-linear-gradient(white, #EFEFFF);
+				background-image:     -o-linear-gradient(white, #EFEFFF);
+				background-image:        linear-gradient(white, #EFEFFF);
+				background-repeat:repeat-x;
+			}
+			h1 {
+				font-size:40px;
+			}
+			input:not([type]), input[type=text] {
+				text-align:center;
+				border-width:1px;
+				border-style:inset;
+				border-radius:2px;
+			}
+			#insult {
+				font-size:32px;
+				width:95%;
+			}
+			
+			footer {
+				position:fixed;
+				bottom:0px;
+				left:0px;
+				right:0px;
+				padding:1px 3px;
+				font-size:12px;
+				text-align:center;
+				background-color:white;
+				background-color:rgba(255,255,255,0.4);
+			}
+		</style>
+	</head>
+	<body onload="showInsult();">
+		<h1>Shakespearean Insult Generator</h1>
+		<input type="text" id="insult"/>
+		<br/>
+		<button onclick="showInsult();" accesskey="g"><u>G</u>enerate a new insult</button>
+		<footer>
+			Written by <a href="https://zmyaro.com" target="_blank">Zachary Yaro</a>
+		</footer>
+	</body>
+</html>
